@@ -27,6 +27,11 @@ $cf{ ap_jpeg } = 0; #JPEG
 # set max data size
 $cf{ maxdata } = 5242880; #5MB
 
+# home URL
+$cf{ homepage } = "./index.html";
+
+#
+
 # return setting value
 sub set_init{
 	return %cf;
