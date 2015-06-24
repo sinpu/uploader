@@ -7,7 +7,7 @@
 # module initialize
 use strict;
 use CGI::Carp qw( fatalsToBrowser );
-use li "./lib";
+use lib "./lib";
 use CGI::Minimal;
 
 # include setting file
