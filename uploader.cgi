@@ -14,5 +14,8 @@ use CGI::Minimal;
 require "./init.cgi";
 my %cf = set_init();
 
-#
-
+# Main process 1 : data accept
+CGI::Minimal::max_read_size( $cf{ maxdata } );
+my $cgi = CGI::Minimal->new;
+error( 'over capacity' ) if ( $cgi -> truncated );
+my %in = parse_form( $cgi );
